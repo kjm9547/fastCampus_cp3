@@ -8,20 +8,20 @@ import { HeaderIcon } from './HeaderButton';
 import { HeaderGroup } from './HeaderGroup';
 
 type CompoundComposition = {
-    Title?:React.FC<{
+    Title:React.FC<{
         title:string
     }>
-    Icon?:React.FC<{
+    Icon:React.FC<{
         onPress:()=>void;
         iconName:keyof typeof Ionicons['glyphMap']
     }>
-    Group?:React.FC<{
+    Group:React.FC<{
         children:ReactElement[]
     }>
 }
 
 export const Header:React.FC<{
-    children:ReactElement[]
+    children:ReactElement[] | ReactElement
 }>& CompoundComposition = (props) => {
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();

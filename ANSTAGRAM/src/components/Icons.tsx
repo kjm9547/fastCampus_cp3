@@ -12,8 +12,10 @@ import React from 'react';
 //     }
 // }
 
+export type TypeIconName = keyof typeof Ionicons.glyphMap;
+
 export const Icon:React.FC<{
-    name:keyof typeof Ionicons.glyphMap;
+    name:TypeIconName
     size:number;
     color:string;
 }> = (props) => (
