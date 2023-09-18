@@ -1,15 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { View } from "react-native";
 import { Typography } from "./components/Typography";
+import { GoogleSignin,GoogleSigninButton } from "@react-native-google-signin/google-signin";
+
 export const SplashView:React.FC<{onFinishLoad:()=>void}> = (props) => {
     useEffect(()=>{
-        setTimeout(()=>{
+        /*setTimeout(()=>{
                 props.onFinishLoad()
-        },1000)
-    })
+        },1000)*/
+        appInit
+    },[])
+
+    const onPressSignin = useCallback(async ()=>{
+        
+    },[])
+
+    const appInit = useCallback(()=>{
+
+    },[])
     return(
         <View style={{flex:1,alignItems:"center",justifyContent:"center"}}>
-            <Typography fontSize={36}>SPLASH VIEW</Typography>
+            <GoogleSigninButton onPress={onPressSignin}/>
         </View>
     )
 }

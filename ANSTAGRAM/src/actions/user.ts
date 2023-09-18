@@ -45,7 +45,7 @@ export const signIn = ():TypeUserThunkAction=> async(dispatch) => {
 export const getMyFeedList = ():TypeUserThunkAction=>async(dispatch) => {
     dispatch(getMyFeedRequest())
 
-    await sleep(500);
+    //await sleep(500);
     dispatch(getMyFeedSuccess([{
         id:'ID_01',
     content:"CONTENT_01",
@@ -53,7 +53,7 @@ export const getMyFeedList = ():TypeUserThunkAction=>async(dispatch) => {
         name:'WRITER_NAME_01',
         uid:'WRITER_UID_01'
     },
-    imageUrl:'IMAGE_URL_01',
+    imageUrl:'https://docs.expo.dev/static/images/tutorial/background-image.png',
     likeHistory:['UID_01','UID_02','UID_03'],
     creaetedAt:new Date().getTime(),
 
@@ -66,7 +66,7 @@ export const getMyFeedList = ():TypeUserThunkAction=>async(dispatch) => {
         name:'WRITER_NAME_02',
         uid:'WRITER_UID_02'
     },
-    imageUrl:'IMAGE_URL_02',
+    imageUrl:'https://docs.expo.dev/static/images/tutorial/background-image.png',
     likeHistory:['UID_02','UID_02','UID_03'],
     creaetedAt:new Date().getTime(),
 
@@ -78,7 +78,7 @@ export const getMyFeedList = ():TypeUserThunkAction=>async(dispatch) => {
         name:'WRITER_NAME_03',
         uid:'WRITER_UID_03'
     },
-    imageUrl:'IMAGE_URL_03',
+    imageUrl:'https://docs.expo.dev/static/images/tutorial/background-image.png',
     likeHistory:['UID_01','UID_02','UID_03'],
     creaetedAt:new Date().getTime(),
 
@@ -90,7 +90,7 @@ export const getMyFeedList = ():TypeUserThunkAction=>async(dispatch) => {
         name:'WRITER_NAME_04',
         uid:'WRITER_UID_04'
     },
-    imageUrl:'IMAGE_URL_04',
+    imageUrl:'https://docs.expo.dev/static/images/tutorial/background-image.png',
     likeHistory:['UID_01','UID_02','UID_03'],
     creaetedAt:new Date().getTime(),
 

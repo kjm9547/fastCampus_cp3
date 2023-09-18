@@ -1,6 +1,7 @@
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { createNativeStackNavigator, NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
+import { FeedInfo } from "../@types/FeedInfo";
 import { AddFeedScreen } from "../screens/AddFeedScreen";
 import { FeedListScreen } from "../screens/FeedListScreen";
 import { BottomTabNavigation } from "./BottomTabNavigation";
@@ -8,13 +9,7 @@ import { BottomTabNavigation } from "./BottomTabNavigation";
 export type RootStackParamList={
     BottomTab:undefined,
     FeedList:{
-        list:{
-            id:string,
-            content:string,
-            writer:string,
-            imageUrl:string,
-            likeCount:number
-        }[]
+        list:FeedInfo[]
     }
     AddFeed:undefined
 }
